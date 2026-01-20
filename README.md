@@ -4,7 +4,7 @@
 
 Sistema web de trazabilidad para la gestión integral del cultivo de limón, desde las labores de campo hasta la poscosecha. Desarrollado en Python con Django, permite registrar, auditar y consultar eventos agronómicos, variables ambientales y operativas a través de una interfaz web y API REST.
 
-> **Enfoque MVP**: Este sistema está diseñado como un MVP (Minimum Viable Product), priorizando la simplicidad y la implementación rápida. Se minimiza la lógica compleja excepto el sistema de eventos dinámicos. El despliegue se realiza mediante Docker para facilitar la instalación y configuración.
+> **Enfoque MVP**: Este sistema está diseñado como un MVP (Minimum Viable Product), priorizando la simplicidad y la implementación rápida. Se minimiza la lógica compleja. El despliegue se realiza mediante Docker para facilitar la instalación y configuración.
 
 ## 🎯 Características Principales
 
@@ -35,6 +35,7 @@ Sistema web de trazabilidad para la gestión integral del cultivo de limón, des
 
 - **[Glosario de Términos](./docs/glosario.md)** - Definiciones y terminología agrícola
 - **[Referencias](./docs/referencias.md)** - Documentos fuente y bibliografía
+- **[Guía de Despliegue en GCP](./docs/GUIA_DESPLIEGUE_GCP.md)** - Instrucciones para desplegar en Google Cloud Platform
 
 ## 🛠️ Stack Tecnológico
 
@@ -48,7 +49,9 @@ Sistema web de trazabilidad para la gestión integral del cultivo de limón, des
 
 ## 🚀 Instalación y Configuración
 
-### Prerrequisitos
+### Desarrollo Local
+
+#### Prerrequisitos
 
 - Docker Desktop instalado
 - Git instalado
@@ -100,6 +103,7 @@ docker compose exec web python manage.py createsuperuser
 ```
 
 Sigue las instrucciones en pantalla para ingresar:
+
 - Nombre de usuario
 - Email (opcional)
 - Contraseña
@@ -170,11 +174,13 @@ docker compose up -d
 ### Solución de Problemas
 
 **El contenedor no inicia:**
+
 ```powershell
 docker compose logs web
 ```
 
 **Error de conexión a la base de datos:**
+
 ```powershell
 # Verificar que el contenedor de PostgreSQL esté corriendo
 docker compose ps
@@ -184,6 +190,7 @@ docker compose restart db
 ```
 
 **Limpiar y empezar desde cero:**
+
 ```powershell
 docker compose down -v
 docker compose build --no-cache
@@ -191,6 +198,16 @@ docker compose up -d
 docker compose exec web python manage.py migrate
 docker compose exec web python manage.py createsuperuser
 ```
+
+### Despliegue en Producción (GCP)
+
+Para desplegar el sistema en un entorno de producción usando Google Cloud Platform, consulta la **[Guía de Despliegue en GCP](./docs/GUIA_DESPLIEGUE_GCP.md)**. La guía incluye:
+
+- Creación y configuración de máquina virtual en GCP
+- Instalación de dependencias (Docker, Git)
+- Configuración de variables de entorno para producción
+- Reglas de firewall y seguridad
+- Comandos de mantenimiento y solución de problemas
 
 ## 👥 Actores del Sistema
 
@@ -217,39 +234,10 @@ El sistema incluye soporte predefinido para los siguientes eventos de trazabilid
 
 ## 📈 Variables Monitoreadas
 
-### Variables de Suelo
-- Humedad del suelo (%)
-- Temperatura del suelo (°C)
-- Conductividad eléctrica (µS/cm)
-- pH
-
 ### Variables Climáticas
+
 - Temperatura ambiente (°C)
 - Humedad relativa (%)
-- Precipitación (mm)
-- Velocidad del viento (m/s)
-
-### Índices de Vegetación
-- NDVI (Normalized Difference Vegetation Index)
-- NDRE (Normalized Difference Red Edge)
-
-## 🚀 Estado del Proyecto
-
-**Fase Actual**: Setup Inicial y Desarrollo Base
-
-### Hitos Completados
-- ✅ Análisis de requerimientos
-- ✅ Definición de arquitectura
-- ✅ Diseño de base de datos
-- ✅ Setup inicial del proyecto Django
-- ✅ Configuración de Docker y Docker Compose
-- ✅ Implementación de modelos base
-
-### Próximos Hitos
-- ⏳ Desarrollo del sistema de eventos dinámicos
-- ⏳ Implementación de API REST completa
-- ⏳ Interfaz web de usuario
-- ⏳ Sistema de autenticación y permisos
 
 ## 📅 Cronograma
 
@@ -265,5 +253,5 @@ Para más información sobre el proyecto, consulta la documentación en el direc
 
 ---
 
-**Última actualización**: Octubre 2025  
-**Versión de la documentación**: 1.0
+**Última actualización**: Diciembre 2025  
+**Versión de la documentación**: 1.1

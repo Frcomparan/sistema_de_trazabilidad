@@ -8,8 +8,6 @@
 
 | Documento | Descripción | Ubicación |
 |-----------|-------------|-----------|
-| **propuesta_chat.md** | Propuesta inicial generada por agente IA (ChatGPT) | `/propuesta_chat.md` |
-| **propuesta_gemini.md** | Propuesta inicial generada por Gemini | `/propuesta_gemini.md` |
 | **Sistema_IoT_Monitoreo_de_Variables.pdf** | Documento de referencia con eventos y variables base | Adjunto |
 
 ### 1.2 Documentos de Diseño
