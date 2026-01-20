@@ -230,8 +230,6 @@ El sistema incluye soporte predefinido para los siguientes eventos de trazabilid
 8. **Poscosecha**: Almacenamiento, procesamiento
 9. **Mano de Obra y Costos**: Registro económico
 
-> **Nota**: El sistema permite crear eventos adicionales de forma dinámica según necesidades específicas.
-
 ## 📈 Variables Monitoreadas
 
 ### Variables Climáticas
@@ -248,6 +246,16 @@ El proyecto está planificado para **16 semanas** de desarrollo. Ver [Cronograma
 Este proyecto es desarrollado como parte de un proyecto de Maestría en Ingeniería de Software.
 
 ## 📧 Contacto
+
+### Autores
+
+- **Ing. Francisco Comparán Pantoja** - [g2546009@colima.tecnm.mx](mailto:g2546009@colima.tecnm.mx)
+- **Ing. Juan Diego de la Cruz Riestra** - [g2546010@colima.tecnm.mx](mailto:g2546010@colima.tecnm.mx)
+- **Ing. Daniel Ramírez Jiménez** - [g2546011@colima.tecnm.mx](mailto:g2546011@colima.tecnm.mx)
+
+### Asesor:
+
+- **Dr. Noel García Díaz** - [ngarci@colima.tecnm.mx](mailto:g2546011@colima.tecnm.mx)
 
 Para más información sobre el proyecto, consulta la documentación en el directorio `/docs`.
 
